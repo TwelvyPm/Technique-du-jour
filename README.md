@@ -1,2 +1,156 @@
-# Technique-du-jour
-Partage d'une technique quotidienne
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technique du jour</title>
+    
+    <!-- Intégration de la police Poppins depuis Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5; /* Fond clair pour contraste */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Date stylisée */
+        .date {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e21a41; /* Couleur de la date */
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .date:hover {
+            color: #111;
+            text-decoration: underline;
+        }
+
+        /* Séparateur (barre horizontale) */
+        .separator {
+            width: 80%;
+            border-top: 2px solid #333;
+            margin: 20px 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Liste des techniques */
+        .techniques {
+            list-style: none;
+            padding: 0;
+            color: #333;
+            font-size: 22px;
+            line-height: 1.8;
+            font-weight: 500;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .techniques li {
+            margin: 15px 0;
+        }
+
+        .techniques li::before {
+            content: "• ";
+            color: #1a1a1a;
+            margin-right: 10px;
+        }
+
+        /* Lien vers la source stylisé */
+        a {
+            color: #e21a41; /* Couleur de la source */
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 30px;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Logo sous le titre */
+        .logo-container {
+            margin-top: 30px;
+        }
+
+        .logo-container img {
+            max-width: 100%; /* La taille du logo s'ajuste automatiquement */
+            height: auto;
+            max-height: 150px; /* Limite la hauteur du logo pour qu'il ne déforme pas */
+            margin-top: 20px;
+        }
+
+        /* Shadow effect on the whole page */
+        body {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Technique du jour</h1>
+
+    <!-- Logo du FC Metz -->
+    <div class="logo-container">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/8/82/Logo_FC_Metz_2021_%28Blason%29.svg/langfr-800px-Logo_FC_Metz_2021_%28Blason%29.svg.png" alt="Logo FC Metz">
+    </div>
+
+    <!-- Affichage de la date actuelle en gras -->
+    <div class="date" id="date"></div>
+
+    <!-- Barre horizontale stylisée -->
+    <div class="separator"></div>
+
+    <!-- Liste des techniques -->
+    <ul class="techniques">
+        <li>Technique 1 : Focus sur la concentration</li>
+        <li>Technique 2 : Gestion du stress par la respiration</li>
+        <li>Technique 3 : Améliorer la productivité avec la méthode Pomodoro</li>
+    </ul>
+
+    <!-- Lien en bas vers le site CIA -->
+    <a href="https://www.cia.gov/" target="_blank">Source : CIA.gov</a>
+
+    <script>
+        // Fonction pour afficher la date du jour
+        const dateElement = document.getElementById('date');
+        const today = new Date();
+        const daysOfWeek = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
+        const monthsOfYear = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+        const day = today.getDate();
+        const dayOfWeek = daysOfWeek[today.getDay()];
+        const month = monthsOfYear[today.getMonth()];
+        const year = today.getFullYear();
+
+        // Affichage de la date dans le format "Lundi 10 novembre 2025"
+        dateElement.innerHTML = `${dayOfWeek} ${day} ${month} ${year}`;
+    </script>
+</body>
+</html>
