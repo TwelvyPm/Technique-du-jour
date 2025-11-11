@@ -4,7 +4,7 @@
 
 ---
 
-## À propos
+## 📝 À propos
 
 Bienvenue sur **mon projet GitHub** ! Ici, tu trouveras toutes les informations nécessaires pour comprendre ce que fait ce projet, comment l'utiliser, et comment y contribuer.
 
@@ -16,7 +16,7 @@ Bienvenue sur **mon projet GitHub** ! Ici, tu trouveras toutes les informations 
 
 ---
 
-## Fonctionnalités principales
+## 🖥️ Fonctionnalités principales
 
 - **Facilité d'utilisation** : L'interface est simple et claire.
 - **Rapidité** : Optimisé pour une utilisation rapide.
@@ -24,7 +24,7 @@ Bienvenue sur **mon projet GitHub** ! Ici, tu trouveras toutes les informations 
 
 ---
 
-## Installation
+## 🧰 Installation
 
 ### Prérequis
 
